@@ -1,0 +1,76 @@
+h2 {
+    margin-bottom: 50px;
+}
+
+/* some default styles for every paragraph - may be overridden below */
+p {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* borders */
+
+.border-1 {
+    border-width: 1px;
+    border-radius: 5px;
+}
+.border-2 {
+    border-width: 4px;
+    border-radius: 5px;
+    border-color: blue;
+}
+.border-3 {
+    border-width: 10px;
+    border-radius: 50%;
+    border-color: darkred;
+    border: dashed; 
+
+}
+
+
+/* border-radius */
+
+.border-radius-1 {
+    border-radius: 100px;
+}
+.border-radius-2 {
+    border-radius: 50px;
+}
+.border-radius-3 {
+    border-radius: 30px;
+}
+
+/* margin */
+
+.margin-1 {
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+.margin-2 {
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    margin-left: 30px; 
+}
+.margin-3 {
+    margin-left: auto; 
+    margin-right: auto;
+    width: 100%;
+}
+
+/* padding */
+
+.padding-1 {
+    padding-left: 50px;
+}
+.padding-2 {
+    padding-right: auto;
+}
+.padding-3 {
+    text-align: center;
+}
+
+/* centre-aligned content */
+
+.centre {
+}

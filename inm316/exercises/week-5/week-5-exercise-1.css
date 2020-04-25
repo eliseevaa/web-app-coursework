@@ -1,0 +1,11 @@
+.card {
+    font-size: 24px;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 2px green;
+}
+.blue {
+    color: blue;
+}
+.orange {
+    color: orange;
+}

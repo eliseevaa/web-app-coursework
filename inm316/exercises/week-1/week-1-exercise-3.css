@@ -1,0 +1,38 @@
+h1 {
+    color: blue;
+  }
+
+img {
+    max-width: 70%;
+  }
+
+.orange {
+    color: orange;
+  }
+.green {
+    color: green;
+  }
+.red {
+    color: red;
+  }
+.intro {
+  width: 500px;
+  padding: 15px 15px 15px 15px; 
+  margin: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.shadowbox {
+  width: 500px;
+  border: 1px solid #33333;
+  box-shadow: 3px 3px 3px 3px #9EA4AE;
+  padding: 15px 15px 15px 15px; 
+  background image: solid #ffffff;
+  margin: 15px
+}
+
+/* Top right text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
