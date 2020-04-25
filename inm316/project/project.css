@@ -102,10 +102,9 @@ nav a.active {
   box-shadow: 6px 6px 10px #E5E5E5;
   border-radius: 10px;
   margin-top: 20px;
-  margin-left:50px;
+  margin-left: 10px;
   max-width: 400px;
   border-width: 0;
-
 }
 
 .card-button { 
@@ -134,25 +133,22 @@ nav a.active {
 .card-details {
   display: none;
   font-family: avenir;
-  
 }
 
-label {
-  margin-left: 70px;
-  padding-top: 50px;
+.card-details-label {
   font-size:16px;
   font-family: avenir;
+  margin: auto;
+  margin-left: 0;
+  white-space:nowrap;
 }
 
 .icon-label-area {
-    display:flex;
-    text-align: center;
-  }
-  
-.icon-label-area.space-between {
-    justify-content: space-between;
-    margin-bottom:50px;
-    
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .label-number {
@@ -191,14 +187,11 @@ h1 {
 h2 {
   font-family: Avenir;
   font-size: 23px;
-  
 }
 
 h2.left {
   padding-left: 70px;
   padding-top: 20px;
-  font-family: Avenir;
-  font-size: 23px;
 }
 
 h2.right {
@@ -206,23 +199,19 @@ h2.right {
   margin-right: 70px;
   margin-left: 415px;
   margin-top: 20px;
-  font-family: Avenir;
-  font-size: 23px;
   margin-bottom: 5px;
 }
 
-
-
 p {
-font-family: Avenir;
-font-size: 16px;
-line-height:20pt;
+  font-family: Avenir;
+  font-size: 16px;
+  line-height:20pt;
 }
 
 p.left-align {
-    padding-left: 70px;
-    padding-top: 10px;
-    padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 10px;
+  padding-right: 70px;
 }
 
 p.right-align {
@@ -234,9 +223,9 @@ p.right-align {
 
 
 ul {
-font-family: Avenir;
-font-size: 16px;
-line-height:20pt;
+  font-family: Avenir;
+  font-size: 16px;
+  line-height:20pt;
 }
 
 ul.left-align {
@@ -247,91 +236,94 @@ ul.left-align {
 }
 
 .button { 
-    padding-left: 70px;
-    padding-top: 10px;
+  padding-left: 70px;
+  padding-top: 10px;
 }
 
 .button1 {
-    margin-right: 15px;
-    background-color: #f5f5f5;
-    padding: 15px 30px;
-    border-radius: 6px;
-    border-width: 2px;
-    border-color: #01B5CE;
-    font-family: Avenir heavy;
-    font-size: 12px;
-    color: #01B5CE;
-    text-transform: uppercase;
-    font-weight: medium;
-    
-  }
+  margin-right: 15px;
+  background-color: #f5f5f5;
+  padding: 15px 30px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-color: #01B5CE;
+  font-family: Avenir heavy;
+  font-size: 12px;
+  color: #01B5CE;
+  text-transform: uppercase;
+  font-weight: medium;
+}
 
-  .button1:hover {
-    background-color: #01B5CE;
-    border-color: #fff;
-    color: #fff;
-    
-  }
-
-  .bg-img {
-    background-image: url("img_1.png");
-
-    /* Control the height of the image */
-    height: 400px;
+.button1:hover {
+  background-color: #01B5CE;
+  border-color: #fff;
+  color: #fff;
   
-    /* Center and scale the image nicely */
-    max-width: 100%;
-    background-position: right bottom;
-    margin-right: 15px;
-    background-repeat: no-repeat;
-    background-size: 383px 324px; 
-  }
+}
 
-  .bg-img2 {
-    background-image: url("img_2.png");
+.icon {
+  /* padding-left:20px;
+  padding-top:20px; 
+  margin-top:20px; */
+}
 
-    /* Control the height of the image */
-    height: 380px;
+.bg-img {
+  background-image: url("img_1.png");
+
+  /* Control the height of the image */
+  height: 400px;
+
+  /* Center and scale the image nicely */
+  max-width: 100%;
+  background-position: right bottom;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-size: 383px 324px; 
+}
+
+.bg-img2 {
+  background-image: url("img_2.png");
+
+  /* Control the height of the image */
+  height: 380px;
+
+  /* Center and scale the image nicely */
+  max-width: 100%;
+  background-position: left bottom;
+  margin-left: 15px;
+  background-repeat: no-repeat;
+  background-size: 383px 324px; 
+}
+
+.bg-img3 {
+  background-image: url("img_3.png");
+
+  /* Control the height of the image */
+  height: 300px;
+
+  /* Center and scale the image nicely */
+  max-width: 100%;
+  background-position:bottom right;
+  margin-right:15px;
+  background-repeat: no-repeat;
+  background-size: 420px px;
+}
+
+a {
+  font-family: avenir medium;
+  font-size: 14px;
+  color: #3E3E3E;
+  font-weight: heavy;
   
-    /* Center and scale the image nicely */
-    max-width: 100%;
-    background-position: left bottom;
-    margin-left: 15px;
-    background-repeat: no-repeat;
-    background-size: 383px 324px; 
-  }
+}
 
-  .bg-img3 {
-    background-image: url("img_3.png");
+a:hover {
+  color: #01B5CE; 
+}
 
-    /* Control the height of the image */
-    height: 300px;
-  
-    /* Center and scale the image nicely */
-    max-width: 100%;
-    background-position:bottom right;
-    margin-right:15px;
-    background-repeat: no-repeat;
-    background-size: 420px px;
-  }
-  
-  a {
-    font-family: avenir medium;
-    font-size: 14px;
-    color: #3E3E3E;
-    font-weight: heavy;
-    
-  }
-
-  a:hover {
-    color: #01B5CE;
-    
-  }
-
-  
-  .findmore {
-    padding-left: 70px;
-    padding-top: 20px;
-  }
+.findmore {
+  padding-left: 70px;
+  padding-top: 20px;
+}
 
    
