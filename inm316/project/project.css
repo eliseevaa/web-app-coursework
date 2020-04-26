@@ -55,7 +55,7 @@ nav a.active {
   box-shadow: 6px 6px 10px #E5E5E5, -6px -6px 16px #f5f5f5;
   border-radius: 10px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   max-width: 1120;
 
 }
@@ -64,6 +64,18 @@ nav a.active {
   padding-left: 70px;
   margin: auto 0;
 }
+
+.block-item-content-container.second {
+  padding-left: 500px;
+  padding-right: 70px;
+  margin: auto 0;
+}
+
+.block-item-content-container.third {
+  padding:70;
+  margin: auto 0;
+}
+
 
 .block-item-image-container {
   background-repeat: no-repeat;
@@ -76,7 +88,7 @@ nav a.active {
 .block-item-image-container.first {
   max-height: 383px;
   background-size: 383px 324px;
-  margin-right: 45px;
+  margin-right: -45px;
   background-position: right bottom;
 }
 
@@ -88,12 +100,15 @@ nav a.active {
   
 }
 
-.block-item-content-container.second {
-  padding-left: 500px;
-  padding-right: 70px;
-  margin: auto 0;
+.block-item-image-container.third {
+  max-height: 404px;
+  background-size: 601px 376px;
+  margin-right: 45px;
+  background-position: right bottom;
+  margin-right:-70;
+  margin-bottom:-70;
+  
 }
-
 
 .bg-img2 {
   background-image: url("img_2.png");
@@ -121,7 +136,6 @@ nav a.active {
 
 .card-ribbon {
   display: flex;
-  margin-right: 70px;
 }
 
 .card-ribbon.space-between {
@@ -152,7 +166,7 @@ nav a.active {
   box-shadow: 6px 6px 10px #E5E5E5;
   border-radius: 10px;
   margin-top: 20px;
-  margin-left: 70px;
+  /* margin-left: 70px; */
   max-width: 234px;
   border-width: 0;
   display: flex;
@@ -233,19 +247,15 @@ p {
 ul {
   font-family: Avenir;
   font-size: 16px;
-  line-height: 20pt;
+  line-height: 30pt;
+  padding:0;
 }
 
-ul.left-align {
-  padding-left: 70px;
-  padding-top: 10px;
-  padding-right: 70px;
-  padding-bottom: 50px;
-}
 
-.button1 {
+.button-main {
   background-color: #f5f5f5;
   padding: 15px 30px;
+  margin-right:15px;
   border-radius: 6px;
   border-width: 2px;
   border-color: #01B5CE;
@@ -256,7 +266,7 @@ ul.left-align {
   font-weight: medium;
 }
 
-.button1:hover {
+.button-main:hover {
   background-color: #01B5CE;
   border-color: #fff;
   color: #fff;
