@@ -57,7 +57,6 @@ nav a.active {
   margin: auto;
   margin-top: 50px;
   max-width: 1120;
-
 }
 
 .block-item-content-container {
@@ -66,16 +65,15 @@ nav a.active {
 }
 
 .block-item-content-container.second {
-  padding-left: 500px;
+  padding-left: 600px;
   padding-right: 70px;
   margin: auto 0;
 }
 
 .block-item-content-container.third {
-  padding:70;
+  padding: 70;
   margin: auto 0;
 }
-
 
 .block-item-image-container {
   background-repeat: no-repeat;
@@ -86,18 +84,17 @@ nav a.active {
 }
 
 .block-item-image-container.first {
-  max-height: 383px;
-  background-size: 383px 324px;
+  max-height: 565px;
+  background-size: 565px 478px;
   margin-right: -45px;
   background-position: right bottom;
 }
 
 .block-item-image-container.second {
-  max-height: 383px;
-  background-size: 383px 324px;
+  max-height: 551px;
+  background-size: 551px 438px;
   margin-right: 45px;
   background-position: left bottom;
-  
 }
 
 .block-item-image-container.third {
@@ -105,9 +102,8 @@ nav a.active {
   background-size: 601px 376px;
   margin-right: 45px;
   background-position: right bottom;
-  margin-right:-70;
-  margin-bottom:-70;
-  
+  margin-right: -70;
+  margin-bottom: -70;
 }
 
 .bg-img2 {
@@ -140,7 +136,6 @@ nav a.active {
 
 .card-ribbon.space-between {
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 
 .card {
@@ -236,26 +231,23 @@ h2 {
   font-size: 23px;
 }
 
-
 p {
   font-family: Avenir;
   font-size: 16px;
   line-height: 20pt;
 }
 
-
 ul {
   font-family: Avenir;
   font-size: 16px;
   line-height: 30pt;
-  padding:0;
+  padding: 0;
 }
-
 
 .button-main {
   background-color: #f5f5f5;
   padding: 15px 30px;
-  margin-right:15px;
+  margin-right: 15px;
   border-radius: 6px;
   border-width: 2px;
   border-color: #01B5CE;
@@ -291,4 +283,19 @@ a:hover {
 
 .find-more-button {
   margin-top: 30px;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 60px;
+}
+
+/* Set the size of the div element that contains the map */
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
