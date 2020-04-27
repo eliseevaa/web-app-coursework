@@ -85,8 +85,7 @@ function showMarkersForComments(comments, map) {
             marker.addListener('click', function () {
                 map.setZoom(8);
                 map.setCenter(marker.getPosition());
-                comment.show
-          
+                scrollToFocusComment(comment);
             });
         }
     );
@@ -102,6 +101,15 @@ function showMarkersForComments(comments, map) {
 //     // first update the buttons
 
 
+function scrollToFocusComment(comment) {
+    var commentElement = document.getElementById(makeUniqueIdForComment(comment));
+    commentElement.scrollIntoView({behavior: "smooth"});
+}
+
+function makeUniqueIdForComment(comment) {
+    return "comment_" + comment.id;
+}
+
 function populateCommentsCarousel(comments) {
     //assigning a div (comments-carousel-id) where the data is going to be populated
     var commentsCarousel = document.getElementById('comments-carousel-id');
@@ -109,6 +117,7 @@ function populateCommentsCarousel(comments) {
     //creating a div for each comment in the carousel  
     comments.forEach( function(comment) {
         var commentElement = document.createElement("div");
+        commentElement.id = makeUniqueIdForComment(comment);
         commentElement.classList.add("comment");
         commentsCarousel.appendChild(commentElement);
         
