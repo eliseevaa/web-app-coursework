@@ -136,31 +136,39 @@ function populateCommentsCarousel(comments) {
         commentDetailsElement.classList.add("comment-details");
         commentElement.appendChild(commentDetailsElement)
 
+        var commentIconNameElement = document.createElement ("div");
+        commentIconNameElement.classList.add("comment-icon-name");
+        commentDetailsElement.appendChild(commentIconNameElement)
+
         var commentPhoto = document.createElement("img");
         commentPhoto.classList.add("profile-image");
         commentPhoto.src = comment.author["profile-pic-url"];
-        commentDetailsElement.appendChild(commentPhoto);
+        commentIconNameElement.appendChild(commentPhoto);
 
         var commentAuthorFirstName = document.createElement("label");
         commentAuthorFirstName.classList.add("label-text");
         commentAuthorFirstName.textContent = comment.author["first-name"];
-        commentDetailsElement.appendChild(commentAuthorFirstName);
+        commentIconNameElement.appendChild(commentAuthorFirstName);
 
         var commentAuthorLastName = document.createElement("label");
         commentAuthorLastName.classList.add("label-text");
         commentAuthorLastName.textContent = comment.author["last-name"];
-        commentDetailsElement.appendChild(commentAuthorLastName);
+        commentIconNameElement.appendChild(commentAuthorLastName);
+
+        var commentParDate = document.createElement ("div");
+        commentParDate.classList.add("comment-p-date");
+        commentDetailsElement.appendChild(commentParDate)
 
         var commentText = document.createElement("p")
         commentText.classList.add("comment-text");
         commentText.textContent = comment.text;
-        commentDetailsElement.appendChild(commentText);
-
+        commentParDate.appendChild(commentText);
+        
         var commentDate = document.createElement("p");
-        commentDate.classList.add("p");
+        commentDate.classList.add("date");
         var formattedDate = new Date(comment.date).toLocaleDateString("en-UK")
         commentDate.textContent = "Date: " + formattedDate;
-        commentDetailsElement.appendChild(commentDate);
+        commentParDate.appendChild(commentDate);
 
     });
 }   

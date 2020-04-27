@@ -221,7 +221,8 @@ nav a.active {
 .label-text {
   font-size: 16px;
   font-family: avenir;
-  padding-right: 15px;
+  padding-right: 10px;
+  font-weight: bold;
   margin: auto;
   color: #000000;
   font-weight: heavy;
@@ -342,6 +343,8 @@ a:hover {
   width: 400px;
   border-width: 0;
   display: inline-block;
+  align-items: flex-start;
+  
 }
 
 .currently-selected-comment {
@@ -352,6 +355,7 @@ a:hover {
 
 .comment-details {
   margin: 20px;
+  height:160px;
 }
 
 .comment-text {
@@ -366,11 +370,31 @@ a:hover {
   -webkit-box-orient: vertical;
 }
 
+.comment-icon-name{
+  vertical-align: middle;
+  display:inline-flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
+.comment-p-date {
+  /* display: flex; */
+  
+  
+}
+.date {
+  color:#727272 ;
+  font-size: 14;
+  position:relative;
+  
+}
+
 .profile-image {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 10px;
   margin-right: 20px;
+  object-fit: cover;
 }
 
 footer {
@@ -389,4 +413,20 @@ footer {
 
 .footer-information {
   padding: 40px;
+}
+
+.article {
+  background-color: #fff;
+  box-shadow: 6px 6px 10px #E5E5E5;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 200px;
+  width: 400px;
+  border-width: 0;
+  display: inline-block;
+  align-items: flex-start;
 }
