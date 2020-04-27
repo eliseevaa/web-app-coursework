@@ -83,27 +83,36 @@ function showMarkersForComments(comments, map) {
         function (comment) {
             var marker = new google.maps.Marker({ position: comment.author.location, map: map });
             marker.addListener('click', function () {
-                map.setZoom(8);
-                map.setCenter(marker.getPosition());
+                map.panTo(marker.getPosition());
                 scrollToFocusComment(comment);
+                updateUISelectingComment(comment);
             });
         }
     );
 }
 
-// // event handling
-// function handleMarkersClick(event) {
-//     var clickedMarker = event.currentTarget;
-//     updateUIforCommentsPosition(clickedMarker)
-
-// // UI update depending on selected marker passed as an argument
-// function updateUIforCommentsPosition(google.maps.Marker) {
-//     // first update the buttons
-
 
 function scrollToFocusComment(comment) {
     var commentElement = document.getElementById(makeUniqueIdForComment(comment));
+    // TODO: Change next line so that only carousel scrolls horizontally
     commentElement.scrollIntoView({behavior: "smooth"});
+}
+
+function updateUISelectingComment(commentData) {
+
+    var commentElements = document.querySelectorAll(".comment")
+
+    // remove selected state from all focused comment 
+    commentElements.forEach(clearCommentFocusState);
+
+    // add selected state just to the focused comment 
+    // find comment div for this commentData
+    var selectedCommentElement = document.getElementById(makeUniqueIdForComment(commentData));
+    selectedCommentElement.classList.add("currently-selected-comment");
+}
+
+function clearCommentFocusState(commentElement) {
+    commentElement.classList.remove("currently-selected-comment");
 }
 
 function makeUniqueIdForComment(comment) {
