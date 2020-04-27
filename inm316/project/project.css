@@ -57,6 +57,9 @@ nav a.active {
   margin: auto;
   margin-top: 50px;
   max-width: 1120;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
 }
 
 .block-item-content-container {
@@ -104,6 +107,12 @@ nav a.active {
   background-position: right bottom;
   margin-right: -70;
   margin-bottom: -70;
+}
+
+.block-item-space-between {
+  justify-content: space-between;
+  margin: auto;
+  display: flex;
 }
 
 .bg-img2 {
@@ -218,7 +227,7 @@ nav a.active {
   font-weight: heavy;
   border-radius: 0;
   border-width: 0;
-  vertical-align: middle;
+  vertical-align: left;
 }
 
 h1 {
@@ -301,19 +310,19 @@ a:hover {
 }
 
 .comments-carousel {
-  background-color: red;
-  box-shadow: 6px 6px 10px #E5E5E5;
+  /* box-shadow: 6px 6px 10px #E5E5E5; */
   border-radius: 10px;
-  margin-top: 20px;
+  /* margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-  margin-right: 20px;
-  height: 400px;
+  margin-right: 20px; */
+  max-height: 400px;
   width: 100%;
   border-width: 0;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  display: flex;
 }
 
 .comments-carousel::-webkit-scrollbar {
@@ -321,14 +330,55 @@ a:hover {
 }
 
 .comment {
-  background-color: aquamarine;
+  background-color: #fff;
   box-shadow: 6px 6px 10px #E5E5E5;
   border-radius: 10px;
   margin-right: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 380px;
-  width: 200px;
+  height: 200px;
+  width: 400px;
   border-width: 0;
   display: inline-block;
+}
+
+.comment-details {
+  margin: 20px;
+}
+
+.comment-text {
+  width: 300px;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.profile-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+footer {
+  background: #263238;
+  margin: auto;
+  margin-top: 50px;
+  padding: 0px;
+  height: 200px;
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 16px;
+  font-family: Avenir;
+}
+
+.footer-information {
+  padding: 40px;
 }

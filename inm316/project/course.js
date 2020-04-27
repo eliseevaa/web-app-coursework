@@ -85,59 +85,66 @@ function showMarkersForComments(comments, map) {
             marker.addListener('click', function () {
                 map.setZoom(8);
                 map.setCenter(marker.getPosition());
+                comment.show
           
             });
         }
     );
 }
 
+// // event handling
+// function handleMarkersClick(event) {
+//     var clickedMarker = event.currentTarget;
+//     updateUIforCommentsPosition(clickedMarker)
+
+// // UI update depending on selected marker passed as an argument
+// function updateUIforCommentsPosition(google.maps.Marker) {
+//     // first update the buttons
+
+
 function populateCommentsCarousel(comments) {
-    //where to put staff
+    //assigning a div (comments-carousel-id) where the data is going to be populated
     var commentsCarousel = document.getElementById('comments-carousel-id');
 
-    //what we are 
-
-    for (var comment in comments) {
+    //creating a div for each comment in the carousel  
+    comments.forEach( function(comment) {
         var commentElement = document.createElement("div");
         commentElement.classList.add("comment");
         commentsCarousel.appendChild(commentElement);
-    }
-}
+        
+        console.log(comment)
+
+        var commentDetailsElement = document.createElement ("div");
+        commentDetailsElement.classList.add("comment-details");
+        commentElement.appendChild(commentDetailsElement)
+
+        var commentPhoto = document.createElement("img");
+        commentPhoto.classList.add("profile-image");
+        commentPhoto.src = comment.author["profile-pic-url"];
+        commentDetailsElement.appendChild(commentPhoto);
+
+        var commentAuthorFirstName = document.createElement("label");
+        commentAuthorFirstName.classList.add("label-text");
+        commentAuthorFirstName.textContent = comment.author["first-name"];
+        commentDetailsElement.appendChild(commentAuthorFirstName);
+
+        var commentAuthorLastName = document.createElement("label");
+        commentAuthorLastName.classList.add("label-text");
+        commentAuthorLastName.textContent = comment.author["last-name"];
+        commentDetailsElement.appendChild(commentAuthorLastName);
+
+        var commentText = document.createElement("p")
+        commentText.classList.add("comment-text");
+        commentText.textContent = comment.text;
+        commentDetailsElement.appendChild(commentText);
+
+        var commentDate = document.createElement("p");
+        commentDate.classList.add("p");
+        var formattedDate = new Date(comment.date).toLocaleDateString("en-UK")
+        commentDate.textContent = "Date: " + formattedDate;
+        commentDetailsElement.appendChild(commentDate);
+
+    });
+}   
 
 
-
-
- // var commentElement = document.creareElement('div');
-            // commentElement.classList.add("comment")
-            // commentElement.classList.add("comment-"+ comment.id);
-
-            // // adding text of the comment to the page
-            // var commentText = document.createElement("p")
-            // commentText.classList.add("p");
-            // commentText.textContent = comment.text;
-            // commentElement.appendChild(commentText);
-
-            // //adding the author to the page 
-            // var commentListElements = document.querySelector(".comments");
-            // commentListElements[0].appendChild(commentElement);
-            
-            // // adding other comment details
-            // var commentAuthorFirstName = document.createElement("p");
-            // commentAuthorFirstName.classList.add("label-text");
-            // commentAuthorFirstName.textContent = "AuthorFirstName: " + comment.author.first-name;
-            // commentElement.appendChild(AuthorFirstName);
-
-            // var commentAuthorLastName = document.createElement("p");
-            // commentAuthorLastName.classList.add("label-text");
-            // commentAuthorLastName.textContent = "AuthorLastName: " + comment.author.last-name;
-            // commentElement.appendChild(AuthorLastName);
-
-            // var commentDate = document.createElement("p");
-            // commentDate.classList.add("p");
-            // commentDate.textContent = "Date: " + comment.date;
-            // commentElement.appendChild(Date);
-
-
-// {
-//     comments.forEach(
-//         function addCommentToPage(comment)
