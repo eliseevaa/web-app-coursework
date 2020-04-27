@@ -79,6 +79,13 @@ function showMarkersForComments(comments, map) {
     comments.forEach(
         function (comment) {
             var marker = new google.maps.Marker({ position: comment.author.location, map: map });
+            marker.addListener('click', function() {
+                map.setZoom(8);
+                map.setCenter(marker.getPosition());
+              });
         }
     );
 }
+
+
+
