@@ -3,6 +3,8 @@ var cardButtonElementsGlobal = document.querySelectorAll(".card-button");
 cardButtonElementsGlobal.forEach(addCardButtonListener);
 updateUISelectingButton(cardButtonElementsGlobal[0]);
 
+
+
 // adding listener
 function addCardButtonListener(cardButtonElement) {
     cardButtonElement.addEventListener("click", handleCardButtonClick);
@@ -65,6 +67,7 @@ function initMap() {
 
     // once compete, proceed to showing markers for each comment on a newly created map
     showMarkersForComments(commentsJSON, map);
+    populateCommentsCarousel(commentsJSON);
 }
 
 function loadCommentsData() {
@@ -79,13 +82,62 @@ function showMarkersForComments(comments, map) {
     comments.forEach(
         function (comment) {
             var marker = new google.maps.Marker({ position: comment.author.location, map: map });
-            marker.addListener('click', function() {
+            marker.addListener('click', function () {
                 map.setZoom(8);
                 map.setCenter(marker.getPosition());
-              });
+          
+            });
         }
     );
 }
 
+function populateCommentsCarousel(comments) {
+    //where to put staff
+    var commentsCarousel = document.getElementById('comments-carousel-id');
+
+    //what we are 
+
+    for (var comment in comments) {
+        var commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+        commentsCarousel.appendChild(commentElement);
+    }
+}
 
 
+
+
+ // var commentElement = document.creareElement('div');
+            // commentElement.classList.add("comment")
+            // commentElement.classList.add("comment-"+ comment.id);
+
+            // // adding text of the comment to the page
+            // var commentText = document.createElement("p")
+            // commentText.classList.add("p");
+            // commentText.textContent = comment.text;
+            // commentElement.appendChild(commentText);
+
+            // //adding the author to the page 
+            // var commentListElements = document.querySelector(".comments");
+            // commentListElements[0].appendChild(commentElement);
+            
+            // // adding other comment details
+            // var commentAuthorFirstName = document.createElement("p");
+            // commentAuthorFirstName.classList.add("label-text");
+            // commentAuthorFirstName.textContent = "AuthorFirstName: " + comment.author.first-name;
+            // commentElement.appendChild(AuthorFirstName);
+
+            // var commentAuthorLastName = document.createElement("p");
+            // commentAuthorLastName.classList.add("label-text");
+            // commentAuthorLastName.textContent = "AuthorLastName: " + comment.author.last-name;
+            // commentElement.appendChild(AuthorLastName);
+
+            // var commentDate = document.createElement("p");
+            // commentDate.classList.add("p");
+            // commentDate.textContent = "Date: " + comment.date;
+            // commentElement.appendChild(Date);
+
+
+// {
+//     comments.forEach(
+//         function addCommentToPage(comment)
