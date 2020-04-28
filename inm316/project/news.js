@@ -29,3 +29,5 @@ function populateArticleSection(articles) {
         newsSection.appendChild(articleElement);
     });
 }
+
+
