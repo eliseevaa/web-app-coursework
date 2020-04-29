@@ -1,6 +1,6 @@
 var url = 'http://newsapi.org/v2/everything?' +
-    'q=presentation skills&' +
-    'from=2020-04-27&' +
+    'q=online courses;public-speaking;&' +
+    'from=2020-04-01&' +
     'sortBy=popularity&' +
     'apiKey=78c620b4a14942c2b4983728d24cc0e9';
 
@@ -47,13 +47,18 @@ function populateArticleSection(articles) {
         articleBodyTitleDetailsElement.classList.add("title-author");
         articleBodyDetailsElement.appendChild(articleBodyTitleDetailsElement)
         
+        var a = document.createElement('a');  
+        a.title = article.title;
+        a.href = article.url;
+        articleBodyTitleDetailsElement.appendChild(a);
+
         var articleTitle= document.createElement("h4")
         articleTitle.classList.add("article-title");
         articleTitle.textContent = article.title;
-        articleBodyTitleDetailsElement.appendChild(articleTitle);
+        a.appendChild(articleTitle);
 
         var articleAuthor= document.createElement("p")
-        articleAuthor.classList.add("label-text");
+        articleAuthor.classList.add("article-author");
         articleAuthor.textContent = article.author;
         articleBodyTitleDetailsElement.appendChild(articleAuthor);
 
@@ -64,20 +69,19 @@ function populateArticleSection(articles) {
 
         var articleDate = document.createElement("p");
         articleDate.classList.add("date");
-        // var formattedDate = new Date(comment.date).toLocaleDateString("en-UK")
-        articleDate.textContent = "Date: " + article.publishedAt;
+        var date = new Date(article.publishedAt);
+        const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date)
+        const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(date)
+        const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date)
+        articleDate.textContent = "Published: " + `${da} ${mo} ${ye}`;
         articleBodyDetailsElement.appendChild(articleDate);
-
-        
 
     });
 }
 
-tool(article);
 
-function tool(article) {
-    link.title = articleTitle.textContent;
-  }
+
+
 
 
 
