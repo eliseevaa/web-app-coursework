@@ -172,6 +172,12 @@ nav a.active {
   flex-direction: column;
 }
 
+.news-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .card-button {
   background-color: #fff;
   height: 82px;
@@ -241,18 +247,24 @@ nav a.active {
 
 h1 {
   font-family: Avenir;
-  font-size: 23px;
+  font-size: 30px;
 }
 
 h2 {
   font-family: Avenir;
-  font-size: 23px;
+  font-size: 30px;
 }
 
 h3 {
   font-family: Avenir;
   font-size: 20px;
   color: #EFEEEE;
+}
+
+h4 {
+  font-family: Avenir;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
 }
 
 p {
@@ -364,8 +376,14 @@ a:hover {
   border-color: #01B5CE;
 }
 
-
 .comment-details {
+  margin: 20px;
+  height:160px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-details {
   margin: 20px;
   height:160px;
   flex-direction: column;
@@ -413,6 +431,47 @@ a:hover {
   object-fit: cover;
 }
 
+.article-image {
+  height: 280px;
+  width: 280px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.article-description {
+  width: 280px;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
+.article-body{
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+ height: 380px;
+}
+
+.title-author{
+
+}
+
+.article-title:hover {
+  color: #01B5CE;
+}
+
+.article-title {
+  font-family: Avenir;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
 footer {
   background: #263238;
   margin: auto;
@@ -437,14 +496,13 @@ footer {
   border-radius: 10px;
   border-style: solid;
   border-width: 0px;
-  margin-right: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 200px;
-  width: 400px;
+  height: 700px;
+  width: 320px;
   border-width: 0;
   display: inline-block;
   align-items: flex-start;
+  margin-bottom: 40px;
+
 }
 
 .promotion-banner {
