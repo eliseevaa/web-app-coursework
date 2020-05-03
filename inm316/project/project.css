@@ -596,3 +596,7 @@ footer {
   margin-top:15px;
 
 }
+
+.hide {
+  display: none;
+}
