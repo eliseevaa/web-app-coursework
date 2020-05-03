@@ -89,7 +89,7 @@ function populateArticleSection() {
 // setup search
 
 // listen to changes in the search form
-var searchInput = document.querySelector(".search");
+var searchInput = document.querySelector(".search-input");
 searchInput.addEventListener("input", updateSearchValue);
 
 // initial search value, which will be empty
