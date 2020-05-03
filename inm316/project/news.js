@@ -10,33 +10,33 @@ var articlesData;
 fetch(req)
     .then((response) => response.json())
     .then((data) => {
-        console.log(data);
         var articles = data.articles;
-        for (var i in articles) {
-            if (!articles[i].id) {
-                articles[i].id = Math.random().toString(36).substring(2, 15);
+        for (var key in articles) {
+            if (!articles[key].id) {
+                articles[key].id = Math.random().toString(36).substring(2, 15);
             }
         }
         articlesData = articles;
-        populateArticleSection(articlesData);
+        console.log(articlesData);
+        populateArticleSection();
     });
 
 function makeUniqueIdForArticle(article) {
     return "article_" + article.id;
 }
 
-function populateArticleSection(articles) {
+function populateArticleSection() {
     //assigning a div (comments-carousel-id) where the data is going to be populated
     var newsSection = document.getElementById('news-section-id');
 
     //creating a div for each article in the carousel  
-    articles.forEach(function (article) {
+    articlesData.forEach(function(article) {
         var articleDiv = document.createElement("div");
         articleDiv.id = makeUniqueIdForArticle(article);
         articleDiv.classList.add("article");
         newsSection.appendChild(articleDiv);
 
-        console.log(article);
+        // console.log(article);
 
         var articleDetailsElement = document.createElement("div");
         articleDetailsElement.classList.add("article-details");
@@ -83,8 +83,6 @@ function populateArticleSection(articles) {
         const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date)
         articleDate.textContent = "Published: " + `${da} ${mo} ${ye}`;
         articleBodyDetailsElement.appendChild(articleDate);
-
-
     });
 }
 
@@ -161,7 +159,7 @@ function checkDataPropertyContainsSearchValue(dataProperty, searchValue) {
     if (dataProperty) {
         if (dataProperty.toLowerCase().includes(searchValue.toLowerCase())) {
             return true;
-            
+
         } else {
             return false
         };
