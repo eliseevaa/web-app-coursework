@@ -52,13 +52,13 @@ nav a.active {
 
 .block-item {
   background-color: #EFEEEE;
-  box-shadow: 6px 6px 10px #E5E5E5, -6px -6px 16px #f5f5f5;
+  box-shadow: 6px 6px 10px #DEDEDE, -6px -6px 16px #f5f5f5;
   border-radius: 10px;
   margin: auto;
   margin-top: 50px;
   max-width: 1000px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
   border-color: white;
   padding:50px;
 }
@@ -189,8 +189,25 @@ nav a.active {
   border-width: 0;
   display: flex;
   outline: none;
+  transition-property: height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
 
+.card-button:hover{
+  height: 90px;
+}
+
+.arrow-icon{
+  padding-left:10px;
+  transition: padding;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.arrow-icon:hover{
+  padding-left:15px;
+}
 .currently-selected-card {
   display: block;
   border-width: 2px;
@@ -566,6 +583,18 @@ footer {
   border-radius: 10px;
   margin-right: 20px;
   object-fit: cover;
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+  transition-property: filter width height ;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  
+}
+
+.team-member-image:hover {
+    width: 160px;
+    height: 160px;
+    filter:none;
 }
 
 .team-member-name {
@@ -592,6 +621,21 @@ footer {
   outline: none;
   
 }
+.email-input {
+  font-family: Avenir;
+  font-size: 14px;
+  color:#727272 ;
+  border-width: 0;
+  outline: none;
+}
+
+.feedback-input {
+  font-family: Avenir;
+  font-size: 14px;
+  color:#727272 ;
+  border-width: 0;
+  outline: none;
+}
 
 .search {
   background-color: #fff;
@@ -607,12 +651,40 @@ footer {
   white-space: nowrap;
 }
 
-.Search-TitleDiv{
+.feedback {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 300px;
+  height:auto;
+  border-width: 2px;
+  border-color: #727272;
+  padding:15px;
+  margin: auto 0;
   display:flex;
   justify-content: space-between;
   white-space: nowrap;
 }
 
+.email {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 200px;
+  border-width: 2px;
+  border-color: #727272;
+  padding:15px;
+  height: 20px;
+  margin: auto 0;
+  display:flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.Search-TitleDiv{
+  display:flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+ 
 .search-icon {
   margin:auto 0;
   height:17px;
@@ -621,4 +693,16 @@ footer {
 
 .hide {
   display: none;
+}
+
+.promotion-banner-icon{
+  width: 80px;
+  height: 80px;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.promotion-banner-icon:hover{
+  width: 120px;
+  height: 120px;
+  transform: rotate(360deg);
 }
