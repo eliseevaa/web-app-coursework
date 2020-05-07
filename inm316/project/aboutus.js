@@ -1,4 +1,7 @@
-function initMap() {
+console.log("page loaded")
+
+
+function initGoogleMap() {
     console.log("map loaded")
 
     var uluru = {lat: 51.4809440, lng:-0.1281286};

@@ -16,17 +16,18 @@ nav {
 nav ul {
   display: flex;
   margin: 0;
-  padding: 0 100px;
+  padding: 0 50px;
   text-align: auto;
   float: right;
 }
 
 nav ul li {
+  /* flex:2; */
   list-style: none;
 }
 
 nav ul li a {
-  display: block;
+  /* display: block; */
   color: #3e3e3e;
   padding: 0 20px;
   text-decoration: none;
@@ -116,10 +117,17 @@ nav a.active {
   display: flex;
 }
 
+.block-item-content-space-between {
+  justify-content: space-between;
+  /* margin: auto; */
+  display: flex;
+}
+
 .bg-img2 {
   /* background-image: url("img_2.png"); */
   /* Control the height of the image */
   height: 300px;
+  width:100%
   /* Center and scale the image nicely */
   max-width: 100%;
   /* background-position: left bottom; */
@@ -140,27 +148,70 @@ nav a.active {
   background-position: bottom right;
   margin-right: 15px;
   background-repeat: no-repeat;
+  background-size: 420px;
+}
+
+.bg-img4 {
+  height: 340px;
+  /* Center and scale the image nicely */
+  max-width: 100%;
+  background-position: bottom right;
+  margin-right: 15px;
+  margin-left:15px;
+  background-repeat: no-repeat;
   background-size: 420px px;
+}
+
+main {
+  display: flex;
+}
+
+form {
+  flex: 3;
+}
+
+picture {
+  flex: 1;
+}
+
+@media (min-width: 800px) {
+  
+  article {
+      flex: 3;
+  }
 }
 
 .card-ribbon {
   display: flex;
 }
 
-.card-ribbon.space-between {
+@media (min-width: 800px) {
+.card-ribbon.space-between-row {
   justify-content: space-between;
   margin-bottom:40px;
 }
 
+.card-ribbon.space-between-column {
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom:40px;
+}
 .card {
   background-color: #fff;
   box-shadow: 6px 6px 10px #E5E5E5;
   border-radius: 10px;
   margin-top: 20px;
-  /* margin-right: 10px; */
-  max-width: 310px;
+  flex-basis: 30%;
   border-width: 0;
 }
+}
+
+@media (min-width: 2000px) {
+  .card {
+      flex-basis: 70%;
+   }
+}
+
 
 .card-inner-container {
   margin-top: 20px;
@@ -181,6 +232,7 @@ nav a.active {
 .card-button {
   background-color: #fff;
   height: 82px;
+  width:200px;
   box-shadow: 6px 6px 10px #E5E5E5;
   border-radius: 10px;
   margin-top: 20px;
@@ -189,15 +241,19 @@ nav a.active {
   border-width: 0;
   display: flex;
   outline: none;
-  transition-property: height;
+  transition-property: width;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
 }
 
 .card-button:hover{
-  height: 90px;
+  width: 240px;
 }
 
+.btn-container{
+  width:240px;
+  /* margin-right:20px; */
+}
 .arrow-icon{
   padding-left:10px;
   transition: padding;
@@ -209,7 +265,7 @@ nav a.active {
   padding-left:15px;
 }
 .currently-selected-card {
-  display: block;
+  /* display: block; */
   border-width: 2px;
   border-color: #01B5CE;
 }
@@ -222,6 +278,7 @@ nav a.active {
 .card-details {
   display: none;
   font-family: avenir;
+  margin-left: 30px;
 }
 
 .card-details-label {
@@ -236,6 +293,7 @@ nav a.active {
   display: flex;
   justify-content: space-between;
 }
+
 
 .label-number {
   font-size: 40px;
@@ -319,10 +377,15 @@ ul {
 }
 
 .icon {
-  /* padding-left:20px;
-  padding-top:20px; 
-  margin-top:20px; */
+  width:50px;
+  /* transition: width;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out; */
 }
+
+/* .icon:hover {
+  width: 55px;
+} */
 
 a {
   font-family: avenir medium;
@@ -577,6 +640,10 @@ footer {
 
 }
 
+.inner-container-team-member {
+
+}
+
 .team-member-image {
   height: 150px;
   width: 150px;
@@ -663,6 +730,7 @@ footer {
   display:flex;
   justify-content: space-between;
   white-space: nowrap;
+  margin-bottom:20px;
 }
 
 .email {
