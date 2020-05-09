@@ -22,6 +22,12 @@ nav ul {
   float: right;
 }
 
+@media (max-width:500px){
+  nav ul {
+    padding: 0 0px;
+  }
+}
+
 nav ul li {
   /* flex:2; */
   list-style: none;
@@ -87,7 +93,7 @@ nav a.active {
   object-fit: contain;
 }
 
-@media (min-width: 500) {
+@media (min-width: 500px) {
   .block-item-image-container  {
     display: flex;
   }
@@ -221,12 +227,8 @@ nav a.active {
     flex-wrap: wrap;
   }
   .card {
-    background-color: #fff;
-    box-shadow: 6px 6px 10px #E5E5E5;
-    border-radius: 10px;
-    margin-top: 20px;
     flex-basis: 100%;
-    border-width: 0;
+    width:100%;
   }
 }
 
@@ -326,6 +328,12 @@ nav a.active {
   display: none;
   font-family: avenir;
   margin-left: 30px;
+}
+
+@media(max-width:700px){
+  .card-details {
+    margin-left: 0;
+  }
 }
 
 .card-details-label {
