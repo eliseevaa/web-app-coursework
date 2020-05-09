@@ -76,7 +76,6 @@ nav a.active {
   width:100%;
 }
 
-
 .block-item-content-container.fixed {
   max-width: 500px;
   margin-right: 40px;
@@ -107,6 +106,7 @@ nav a.active {
   background-size: 500px 400px;
   background-position: right bottom;
   background-image: url(img_2.png);
+
 }
 
 @media (max-width: 1000px) {
@@ -237,7 +237,6 @@ nav a.active {
   }
   .card-ribbon.space-between-column {
     flex: 1;
-    
   }
   .block-item-details {
     flex: 3;
@@ -674,7 +673,6 @@ footer {
   flex:2;
 }
 }
-
 
 .team-member-image {
   width: 150px;
