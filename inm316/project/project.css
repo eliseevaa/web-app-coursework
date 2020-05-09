@@ -22,7 +22,7 @@ nav ul {
   float: right;
 }
 
-@media (max-width:500px){
+@media (max-width:500px) {
   nav ul {
     padding: 0 0px;
   }
@@ -79,7 +79,7 @@ nav a.active {
 
 .block-item-content-container {
   margin: auto 0;
-  width:100%;
+  width: 100%;
 }
 
 .block-item-content-container.fixed {
@@ -94,7 +94,7 @@ nav a.active {
 }
 
 @media (min-width: 500px) {
-  .block-item-image-container  {
+  .block-item-image-container {
     display: flex;
   }
 }
@@ -117,7 +117,6 @@ nav a.active {
   background-size: 500px 400px;
   background-position: right bottom;
   background-image: url(img_2.png);
-
 }
 
 @media (max-width: 1000px) {
@@ -157,35 +156,33 @@ nav a.active {
   display: flex;
 }
 
-.block-item-content-container2{
+.block-item-content-container2 {
   margin: auto 0;
-  width:100%;
+  width: 100%;
 }
 
-@media(min-width:1000px){
-  .block-item-space-between2{
-    display:flex;
+@media(min-width:1000px) {
+  .block-item-space-between2 {
+    display: flex;
   }
-  .block-item-content-container2{
-    flex:2;
+  .block-item-content-container2 {
+    flex: 2;
   }
-  .video{
-    flex:2;
+  .video {
+    flex: 2;
   }
 }
 
-@media(max-width:1000px){
-  .block-item-space-between2{
+@media(max-width:1000px) {
+  .block-item-space-between2 {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .video{
-    flex-basis:100%;
-    margin-top:40px;
+  .video {
+    flex-basis: 100%;
+    margin-top: 40px;
   }
 }
-
-
 
 .block-item-content-space-between {
   justify-content: space-between;
@@ -228,7 +225,7 @@ nav a.active {
   }
   .card {
     flex-basis: 100%;
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -252,26 +249,28 @@ nav a.active {
   flex-direction: column;
 }
 
-.news-section{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
-}
-
-@media(max-width:500px){
-  .news-section{
-  display:flex;
+.news-section {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media(max-width:500px) {
+  .news-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
-  .article {
-    flex-basis:100%;
-  }
 
-  .article-details {
-    flex-basis:100%; 
-  }
+.article {
+  flex-basis: 100%;
+}
+
+.article-details {
+  flex-basis: 100%;
+}
+
 }
 
 .card-button {
@@ -346,7 +345,7 @@ nav a.active {
   margin-left: 30px;
 }
 
-@media(max-width:700px){
+@media(max-width:700px) {
   .card-details {
     margin-left: 0;
   }
@@ -372,7 +371,6 @@ nav a.active {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
   .card-details {
     flex-basis: 100%;
   }
@@ -510,30 +508,26 @@ a:hover {
   width: 100%;
 }
 
-@media(max-width:800px){
-  .block-item-inner-container{
+@media(max-width:800px) {
+  .block-item-inner-container {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
   .map-container2 {
-    flex-basis:100%;
-    margin-top:20px;
+    flex-basis: 100%;
+    margin-top: 20px;
   }
 }
-
-
-
 
 .video {
   width: 100%;
   height: 315px;
 }
 
-@media(max-width:500px){
-  .block-item{
-    margin:15px;
-    padding:30px;
+@media(max-width:500px) {
+  .block-item {
+    margin: 15px;
+    padding: 30px;
   }
 }
 
@@ -630,12 +624,13 @@ a:hover {
 }
 
 .article-image {
-  height: 280px;
-  width: 280px;
+  /* height: 280px;
+  width: 280px; */
   border-radius: 5px;
   object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
-
 
 .article-description {
   /* width: 280px; */
@@ -715,11 +710,29 @@ footer {
   border-style: solid;
   border-width: 0px;
   height: 700px;
-  flex-basis:30%;
+  /* flex-basis: 30%; */
   border-width: 0;
   display: inline-block;
   align-items: flex-start;
   margin-bottom: 40px;
+}
+
+@media (min-width: 900px) {
+  .article {
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width: 900px) {
+  .article {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .article {
+    flex-basis: 100%;
+  }
 }
 
 .promotion-banner {
@@ -749,19 +762,19 @@ footer {
   width: 600px;
 }
 
-@media(min-width:800px){
-.team-member-container {
-  display:flex;
-  flex-direction:column;
-  white-space: nowrap;
-  justify-content: space-between;
-}
-.team-member-image{
-  flex:3;
-}
-.team-member{
-  flex:2;
-}
+@media(min-width:800px) {
+  .team-member-container {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+  .team-member-image {
+    flex: 3;
+  }
+  .team-member {
+    flex: 2;
+  }
 }
 
 .team-member-image {
@@ -777,7 +790,7 @@ footer {
 }
 
 .team-member-image:hover {
-  transform:scale(1.1);
+  transform: scale(1.1);
   filter: none;
 }
 
@@ -870,43 +883,40 @@ footer {
   white-space: nowrap;
 }
 
-@media(max-width:500px){
+@media(max-width:500px) {
   .Search-TitleDiv {
     flex-wrap: wrap;
   }
-
-  .search{
-    flex-basis:100%;
-    margin-bottom:20px;
+  .search {
+    flex-basis: 100%;
+    margin-bottom: 20px;
   }
 }
 
-
-@media (min-width:700px){
+@media (min-width:700px) {
   .block-item-space-between {
-    display:flex;
+    display: flex;
   }
   .block-item-content-container {
-    flex:3;
+    flex: 3;
   }
-  .promotion-banner{
-    flex:2;
+  .promotion-banner {
+    flex: 2;
   }
 }
 
 @media (max-width:1100px) {
-
-  .block-item-space-between{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  .block-item-space-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .promotion-banner {
     margin-left: 0;
-    width:100%;
+    width: 100%;
   }
   .promotion-banner-content-container {
-    height:70%;
+    height: 70%;
   }
 }
 
@@ -916,34 +926,29 @@ footer {
   }
   .team-container-space-between {
     flex-wrap: wrap;
-    width:100%;
-  }
-  .team-member-container{
-    flex-basis:50%;
-    justify-content:space-between;
-  }  
-  .team-member-image{
     width: 100%;
-    margin-top:20px;
+  }
+  .team-member-container {
+    flex-basis: 50%;
+    justify-content: space-between;
+  }
+  .team-member-image {
+    width: 100%;
+    margin-top: 20px;
   }
 }
 
-
-@media (max-width:500px){
-  .team-member-container{
-    flex-basis:100%;
+@media (max-width:500px) {
+  .team-member-container {
+    flex-basis: 100%;
   }
-
   .promotion-banner {
-    margin-left:0;
+    margin-left: 0;
   }
-
-  .team-member-image{
-    margin-top:20px;
+  .team-member-image {
+    margin-top: 20px;
   }
 }
-
-
 
 .search-icon {
   margin: auto 0;
