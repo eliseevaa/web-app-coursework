@@ -3,8 +3,6 @@ var cardButtonElementsGlobal = document.querySelectorAll(".card-button");
 cardButtonElementsGlobal.forEach(addCardButtonListener);
 updateUISelectingButton(cardButtonElementsGlobal[0]);
 
-
-
 // adding listener
 function addCardButtonListener(cardButtonElement) {
     cardButtonElement.addEventListener("click", handleCardButtonClick);
@@ -50,8 +48,6 @@ function clearCardDetailState(cardDetailElement) {
     console.log(cardDetailElement)
     cardDetailElement.style.display = "none"
 }
-
-// let GoogleAPIKey = "AIzaSyAFOcBsIzE0l_cu0RyIMz0sV9nc74FCQ-w"
 
 // Initialize and add the map. This function gets executed when google script for embedding map finishes loading
 // so we can proceed to map setup having google.maps available
@@ -169,8 +165,5 @@ function populateCommentsCarousel(comments) {
         var formattedDate = new Date(comment.date).toLocaleDateString("en-UK")
         commentDate.textContent = "Date: " + formattedDate;
         commentParDate.appendChild(commentDate);
-
     });
 }   
-
-
