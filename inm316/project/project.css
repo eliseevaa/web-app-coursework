@@ -271,7 +271,6 @@ nav a.active {
   flex-basis: 100%;
 }
 
-}
 
 .card-button {
   background-color: #fff;
@@ -711,6 +710,13 @@ a:hover {
   font-family: Avenir;
   font-size: 20px;
   color: rgb(0, 0, 0);
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 footer {
@@ -737,7 +743,7 @@ footer {
   border-radius: 10px;
   border-style: solid;
   border-width: 0px;
-  height: 550px;
+  height: 555px;
   /* flex-basis: 30%; */
   border-width: 0;
   display: inline-block;
@@ -813,12 +819,12 @@ footer {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition-property: all;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
 
 .team-member-image:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   filter: none;
 }
 
@@ -878,7 +884,7 @@ footer {
 .feedback {
   background-color: #fff;
   border-radius: 5px;
-  width: 300px;
+  max-width: 300px;
   height: auto;
   border-width: 2px;
   border-color: #727272;
