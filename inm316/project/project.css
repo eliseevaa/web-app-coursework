@@ -252,10 +252,26 @@ nav a.active {
   flex-direction: column;
 }
 
-.news-section {
-  display: flex;
+.news-section{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+
+@media(max-width:500px){
+  .news-section{
+  display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  }
+}
+  .article {
+    flex-basis:100%;
+  }
+
+  .article-details {
+    flex-basis:100%; 
+  }
 }
 
 .card-button {
@@ -568,7 +584,7 @@ a:hover {
 
 .article-details {
   margin: 20px;
-  height: 160px;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -620,8 +636,9 @@ a:hover {
   object-fit: cover;
 }
 
+
 .article-description {
-  width: 280px;
+  /* width: 280px; */
   word-break: break-word;
   white-space: normal;
   overflow: hidden;
@@ -656,7 +673,7 @@ a:hover {
 }
 
 .title-author {
-  width: 280px;
+  /* width: 280px; */
   word-break: break-word;
   white-space: normal;
   overflow: hidden;
@@ -698,7 +715,7 @@ footer {
   border-style: solid;
   border-width: 0px;
   height: 700px;
-  width: 320px;
+  flex-basis:30%;
   border-width: 0;
   display: inline-block;
   align-items: flex-start;
