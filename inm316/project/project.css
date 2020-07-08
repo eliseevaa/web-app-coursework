@@ -354,8 +354,9 @@ nav a.active {
   font-size: 40px;
   font-family: avenir next condensed;
   color: #E8505B;
+  margin: auto;
   margin-left: 15px;
-  margin-right: 15px;
+  margin-right: 0;
   font-weight: bold;
   border-radius: 0;
   border-width: 0;
