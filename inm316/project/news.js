@@ -1,9 +1,11 @@
-// initial set up of the third party API
-var url = 'http://newsapi.org/v2/everything?' +
-    'q=Apple&' +
-    'from=2020-07-08&' +
-    'sortBy=popularity&' +
-    'apiKey=78c620b4a14942c2b4983728d24cc0e9';
+// // initial set up of the third party API
+// var url = 'http://newsapi.org/v2/everything?' +
+//     'q=Apple&' +
+//     'from=2020-07-08&' +
+//     'sortBy=popularity&' +
+//     'apiKey=78c620b4a14942c2b4983728d24cc0e9';
+
+var url = 'https://raw.githubusercontent.com/eliseevaa/web-app-coursework/master/inm316/project/data/news-data.json'
 
 var req = new Request(url);
 var articlesData;
